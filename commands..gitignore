@@ -1,0 +1,15 @@
+ nvcc --version
+nvidia-smi
+
+
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+
+winget install Python.Python.3.10
+
+rmdir venv -Recurse -Force  //deleted previous rmv since it support only in this python 3.10
+
+py -3.10 -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+
